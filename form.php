@@ -9,7 +9,13 @@
     public function input($name)
     {
       echo '<p><label for="'.$name.'">'.$name.'</label></p>';
-      echo '<p><input id="'.$name.'" text="text" name="'.$name.'"></p>';
+      echo '<p><input id="'.$name.'" type="text" name="'.$name.'"></p>';
+    }
+
+    public function inputDate($name)
+    {
+      echo '<p><label for="'.$name.'">'.$name.'</label></p>';
+      echo '<p><input id="'.$name.'" type="date" name="'.$name.'"></p>';
     }
     public function submit()
     {

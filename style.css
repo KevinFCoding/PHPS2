@@ -1,3 +1,15 @@
+body{
+font-family: 'PT Sans', sans-serif;
+width : 100%;
+padding: 0;
+margin: 0;
+
+}
+body h1, body h2, body h3, body h4, body h5, body h5{
+    font-family: 'Antic Slab', sans-serif;
+}
+
+
 .reco {
 	border: 2px solid black;
 	background-color: red;
@@ -10,7 +22,6 @@
 
 .image
 {
-	position: left; margin: 10px;
 	border: 1px solid;
 }
 section
@@ -18,3 +29,61 @@ section
 	border:2px solid;
 	padding: 20px;
 }
+
+
+.dn {
+    margin-top: -10px;
+    margin-left: 20%;
+   
+    padding: 20px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.menu1 {
+    color: #da0000;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: -4px;
+    float: left;
+    display: flex;
+}
+
+.menu2 {
+	color: #da0000;
+}
+
+.menu3 {
+	text-decoration: none;
+}
+
+.surv {
+	border-top: 2px solid #fff;
+	/* transition quand la souris quitte l'élément */
+	transition: border-color 0,4s;
+}
+
+.surv:hover {
+	border-top: 2px solid #da0000;
+	/* transition quand la souris survole */
+	transition: all 2s;
+}
+
+.backgr{
+    background-image: url("./../Image/logo_smartacus1.png");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    margin-top: -20px;
+    margin-bottom: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 20px;
+
+}
+

@@ -1,82 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Accueil</title>
+    <meta charset="utf-8"/>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Antic+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <title>Accueil</title>
+  </head>
 </head>
 <body>
+  <header> 
+
+      <div class="boiteHeader">
+
+              <div class="logoItes"> 
+                  <a href="index.html"> <img src="img/logocoding.png" > </a>
+              </div>
+                    
+                
+
+                <div class="dn">
+                
+                    <div class="menu1 surv surv:hover" ">
+                        <a href="https://codingfactory.fr/concept/" class="menu3">
+                            <div class="menu2">CONCEPT</div></a>
+                    </div>
+
+                    <div class="menu1 surv surv:hover">
+                        <a href="https://codingfactory.fr/developpeur/" class="menu3">
+                            <div class="menu2">FORMATIONS</div></a>
+                    </div>
+
+                    <div class="menu1 surv surv:hover">
+                        <a href="https://codingfactory.fr/equipe/" class="menu3">
+                            <div class="menu2">EQUIPE</div></a>
+                    </div>
+
+                    <div class="menu1 surv surv:hover">
+                        <a href="https://codingfactory.fr/entreprises/" class="menu3">
+                            <div class="menu2">ENTREPRISE</div></a>
+                    </div>
+
+                    <div class="menu1 surv surv:hover">
+                        <a href="https://codingfactory.fr/presse/" class="menu3">
+                            <div class="menu2">PRESSE</div></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+    <div class="backgr">
+    <!-- Img -->
+    </div>
+     <h1><i class="far fa-calendar-alt"></i><br>Janvier <br> 2018 </h1>
+
+    </header>
   <section>
-    <div class="image"><a href="https://codingfactory.fr/"><img src="http://ability-search.com/uploads/campus/logo_168.png?35554a8740673edb2c01090ba6ff4fdd"></a></div>
-  <h1>Agent Intervenant</h1>
-<?php
-require 'personne.php';
-require 'form.php';
-require 'request.php';
-$Form = new form('post');
-//$pers = new personne("Andrieu","William","wiwi@gmail.com","19","501515","akodazkopzd");
-$bdd = new request('mysql', 'localhost', 'base', 'root', '');
-$bdd->getmybdd();
-$bdd->getAllRow('personne');
-//$pers->getNom();
-//$bdd->setInsert($pers->getNom(),$pers->getPrenom(), $pers->getAdress(), $pers->getAge(), $pers->getTel(), $pers->getMail());
-
-?> 
- <form method="post">
-  <?php 
-    $Form->input('Nom');
-    $Form->input('Prenom');
-    $Form->input('Adresse');
-    $Form->input('Age');
-    $Form->input('Tel');
-    $Form->input('Mail');
-       
-    $tab = array('HTML' => 'THOMAS','PHP'=>'Francois','MySql' =>'unpeuFrancois');//revoir
-?>
-  <div>
-  <select>
-    <p>
-    <?php  
-    foreach ($tab as $key => $value) {
-      echo "<option value=".$key.">".$value."</option>";
-    }
-    ?>
-    </p>
-  </select>
-
-  <select>
     
-    <?php  
-    foreach ($tab as $key => $value) {
-      echo "<option value=".$value.">".$key."</option>";
-    }
-    ?>
-
-  </select>
-
-  </div>
-  <div>
-  <label for="place">Cergy</label>
-  <input type="radio" name="place">
-
-  <label for="place">Champeret</label>
-  <input type="radio" name="place">
-
-
-  </div>
-
-       <?php
-          $Form->submit();
-       ?>
-
-</form>
-  <?php
-    if(sizeof($_POST)>0)
-    {
-        $pers = new personne($_POST['Nom'],$_POST['Prenom'],$_POST['Adresse'],$_POST['Age'],$_POST['Tel'],$_POST['Mail']);
-    $bdd->setInsert($pers->getNom(),$pers->getPrenom(), $pers->getAdress(), $pers->getAge(), $pers->getTel(), $pers->getMail());
-    $bdd->getAllRow("personne");
-    }  
-  ?>
   </section>
 </body>
 </html>
